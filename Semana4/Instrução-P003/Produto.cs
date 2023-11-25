@@ -9,7 +9,7 @@
             Preco = preco;
         }
 
-        private static int CodigoProduto { get; set; } = 0;
+        private static int CodigoProduto { get; set; } = 1;
         private int Codigo { get; }
         private string Nome { get; set; }
         private int Quantidade { get; set; }

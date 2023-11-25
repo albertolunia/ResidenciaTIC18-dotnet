@@ -1,3 +1,4 @@
+
 namespace Instrução_P003
 {
     class Estoque {
@@ -15,9 +16,10 @@ namespace Instrução_P003
             Produtos.AddRange(produtos);
         }
 
-        public void TEncherEstoque(Tuple<string, int, double> produto){
-            Produto produto1 = new Produto(produto.Item1, produto.Item2, produto.Item3);
-            Produtos.Add(produto1);
+        public void EncherEstoque((string, int, double) tupla)
+        {
+            var produto = new Produto(tupla.Item1, tupla.Item2, tupla.Item3);
+            Produtos.Add(produto);
         }
 
         public void ListarProdutos(){
@@ -26,7 +28,7 @@ namespace Instrução_P003
             }
             else{
                 foreach(Produto produto in Produtos){
-                    Console.WriteLine($"Código: {produto.GetCodigo()} \t| Nome: {produto.GetNome()} \t| Quantidade: {produto.GetQuantidade()} \t| Preço: {produto.GetPreco()}");
+                    Console.WriteLine($"Código: {produto.GetCodigo()} \t| Nome: {produto.GetNome()} \t| Quantidade: {produto.GetQuantidade()} \t| Preço: R${produto.GetPreco()}");
                 }
             }
         }
@@ -34,7 +36,7 @@ namespace Instrução_P003
         public void BuscaProduto(int codigo){
             try{
                 Produto produto = Produtos.Find(p => p.GetCodigo() == codigo);
-                Console.WriteLine($"Código: {produto.GetCodigo()} \t| Nome: {produto.GetNome()} \t| Quantidade: {produto.GetQuantidade()} \t| Preço: {produto.GetPreco()}");
+                Console.WriteLine($"Código: {produto.GetCodigo()} \t| Nome: {produto.GetNome()} \t| Quantidade: {produto.GetQuantidade()} \t| Preço: R${produto.GetPreco()}");
             }catch{
                 Console.WriteLine("\nProduto não encontrado!");
             }            
