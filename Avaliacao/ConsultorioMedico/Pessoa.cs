@@ -1,10 +1,8 @@
 namespace ConsultorioMedico{
-    class Paciente{
+    class Pessoa{
         private string _nome;
         private string _dataNascimento;
         private string _cpf;
-        private string _sexo;
-        private string _sintomas;
 
         public string Nome{
             get{
@@ -33,23 +31,12 @@ namespace ConsultorioMedico{
             }
         }
 
-        public string Sexo{
-            get{
-                return _sexo;
-            }
-            set{
-                if(value == "M" || value == "F")
-                    _sexo = value;
-            }
+        public string FormatarCPF(string cpf){
+            return cpf.Insert(3, ".").Insert(7, ".").Insert(11, "-");
         }
 
-        public string Sintomas{
-            get{
-                return _sintomas;
-            }
-            set{
-                _sintomas = value;
-            }
+        public string FormatarData(string data){
+            return data.Insert(2, "/").Insert(5, "/");
         }
     }
 }

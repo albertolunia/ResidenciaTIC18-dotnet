@@ -1,10 +1,9 @@
 namespace ConsultorioMedico{
-    class Paciente{
+    class Medico{
         private string _nome;
         private string _dataNascimento;
         private string _cpf;
-        private string _sexo;
-        private string _sintomas;
+        private string _crm;
 
         public string Nome{
             get{
@@ -33,23 +32,13 @@ namespace ConsultorioMedico{
             }
         }
 
-        public string Sexo{
+        public string Crm{
             get{
-                return _sexo;
+                return _crm;
             }
             set{
-                if(value == "M" || value == "F")
-                    _sexo = value;
+                _crm = value;
             }
-        }
-
-        public string Sintomas{
-            get{
-                return _sintomas;
-            }
-            set{
-                _sintomas = value;
-            }
-        }
+        } 
     }
 }

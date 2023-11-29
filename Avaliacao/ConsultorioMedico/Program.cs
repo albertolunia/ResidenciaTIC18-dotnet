@@ -8,13 +8,13 @@ class Programa{
         Medico medico = new();
 
         paciente.Nome = "João";
-        paciente.DataNascimento = new(2000, 1, 1);
+        paciente.DataNascimento = "29111999";
         paciente.Cpf = "99999999999";
         paciente.Sexo = "M";
         paciente.Sintomas = "Dor de cabeça";
 
         medico.Nome = "José";
-        medico.DataNascimento = new(1990, 1, 1);
+        medico.DataNascimento = "29112010";
         medico.Cpf = "12345678910";
         medico.Crm = "123456";
 
