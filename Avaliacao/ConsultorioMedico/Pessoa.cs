@@ -30,13 +30,5 @@ namespace ConsultorioMedico{
                 _cpf = value;
             }
         }
-
-        public string FormatarCPF(string cpf){
-            return cpf.Insert(3, ".").Insert(7, ".").Insert(11, "-");
-        }
-
-        public string FormatarData(string data){
-            return data.Insert(2, "/").Insert(5, "/");
-        }
     }
 }
