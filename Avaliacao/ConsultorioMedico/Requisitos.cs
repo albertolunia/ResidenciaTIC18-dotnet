@@ -41,5 +41,10 @@ namespace ConsultorioMedico{
         private string FormatarData(string data){
             return data.Insert(2, "/").Insert(5, "/");
         }
+
+        public void MedicosEntreIdade(Medico medico1, Medico medico2){
+            
+
+        }
     }
 }
