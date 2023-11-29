@@ -57,11 +57,14 @@ class Programa{
 
         requisitos.CadastrarMedico(medico);
 
+        Console.WriteLine("Exemplo utilizando")
+
         requisitos.ListarPacientes();
         requisitos.ListarMedicos();
 
         //Testando se insere pacientes com o mesmo CPF
 
+        Console.WriteLine("\nTestando se é possivel inserir pacientes e medicos duplicados\n");
         requisitos.CadastrarPaciente(paciente);
 
         //Testando se insere medicos com o mesmo CPF
@@ -81,16 +84,16 @@ class Programa{
         Console.WriteLine("\nRelatorio: Pacientes com idades entre dois valores:");
         requisitos.PacientesEntreIdade(20, 30);
 
-        Console.WriteLine("\nRelatorio: Pacientes do sexo masculino:\n");
+        Console.WriteLine("\nRelatorio: Pacientes do sexo informado pelo usuario:");
         requisitos.PacientesDoSexo("M");
 
-        Console.WriteLine("\nLista de Pacientes Ordenada");
+        Console.WriteLine("\nRelatorio: Pacientes em ordem alfabética:");
         requisitos.ListarPacientesEmOrdem();
 
-        Console.WriteLine("\nPacientes com sintomas de dor de cabeça:\n");
+        Console.WriteLine("\nRelatorio: Pacientes cujos sintomas contenha texto informado pelo usuário");
         requisitos.PacientesComSintomas("Dor de cabeça");
 
-        Console.WriteLine("\nRelatorio: Aniversariantes do mês:\n");
-        requisitos.AniversariantesDoMes();
+        Console.WriteLine("\nRelatorio: Médicos e Pacientes aniversariantes do mês informado:");
+        requisitos.AniversariantesDoMes(11);
     }
 }
