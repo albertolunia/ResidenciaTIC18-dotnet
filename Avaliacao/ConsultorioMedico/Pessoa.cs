@@ -30,5 +30,11 @@ namespace ConsultorioMedico{
                 _cpf = value;
             }
         }
+
+        public int CalcularIdade(){
+            int anoNascimento = int.Parse(DataNascimento.Substring(4, 4));
+            int anoAtual = int.Parse(DateTime.Now.ToString("yyyy"));
+            return anoAtual - anoNascimento;
+        }
     }
 }

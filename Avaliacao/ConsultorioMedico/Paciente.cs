@@ -1,3 +1,5 @@
+using System.Net.WebSockets;
+
 namespace ConsultorioMedico{
     class Paciente: Pessoa{
         private string _sexo;
@@ -8,7 +10,7 @@ namespace ConsultorioMedico{
                 return _sexo;
             }
             set{
-                if(value == "M" || value == "F")
+                if(value == "M" || value == "m" || value == "F" || value == "f")
                     _sexo = value;
             }
         }

@@ -57,14 +57,12 @@ class Programa{
 
         requisitos.CadastrarMedico(medico);
 
-        Console.WriteLine("Exemplo utilizando")
-
         requisitos.ListarPacientes();
         requisitos.ListarMedicos();
 
         //Testando se insere pacientes com o mesmo CPF
 
-        Console.WriteLine("\nTestando se é possivel inserir pacientes e medicos duplicados\n");
+        Console.WriteLine("\nTestando se é possivel inserir pacientes e medicos duplicados");
         requisitos.CadastrarPaciente(paciente);
 
         //Testando se insere medicos com o mesmo CPF
@@ -95,5 +93,28 @@ class Programa{
 
         Console.WriteLine("\nRelatorio: Médicos e Pacientes aniversariantes do mês informado:");
         requisitos.AniversariantesDoMes(11);
+
+        Console.WriteLine("\n---------------------------------------------\n");
+        Console.WriteLine("Testanto exceções:\n");
+
+        paciente = new Paciente{
+            Nome = "Maria",
+            DataNascimento = "21022001",
+            Cpf = "999939999999999",
+            Sexo = "x",
+            Sintomas = "Colica"
+        };
+        
+        requisitos.CadastrarPaciente(paciente);
+
+        medico = new Medico{
+            Nome = "Ana",
+            DataNascimento = "21022001",
+            Cpf = "12312345678911",
+            Crm = "123457"
+        };
+
+        requisitos.CadastrarMedico(medico);
+
     }
 }
