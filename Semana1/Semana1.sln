@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{8F68766E-2784-428C-BBCA-D26B32B19621}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi", "TodoApi\TodoApi.csproj", "{C07EE799-5239-4953-B6D7-9829311F5F8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F68766E-2784-428C-BBCA-D26B32B19621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F68766E-2784-428C-BBCA-D26B32B19621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F68766E-2784-428C-BBCA-D26B32B19621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F68766E-2784-428C-BBCA-D26B32B19621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C07EE799-5239-4953-B6D7-9829311F5F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07EE799-5239-4953-B6D7-9829311F5F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07EE799-5239-4953-B6D7-9829311F5F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07EE799-5239-4953-B6D7-9829311F5F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
