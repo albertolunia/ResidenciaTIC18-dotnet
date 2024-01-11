@@ -34,9 +34,8 @@ public class TechMedContext : DbContext
             .HasForeignKey(a => a.PacienteId);
 
         modelBuilder.Entity<Exame>()
-            .HasOne(e => e.Atendimento)
-            .WithMany(a => a.Exames)
-            .HasForeignKey(e => e.AtendimentoId);
+            .HasMany(e => e.Atendimentos)
+            .WithMany(a => a.Exames);
     }
 }
 
@@ -65,13 +64,14 @@ public class Atendimento{
     public int Id { get; set; }
     public DateTime DataHora { get; set; }
     public required Medico Medico { get; set; }
-    public required int MedicoId { get; set; }
+    public int MedicoId { get; set; }
 
     public required Paciente Paciente { get; set; }
 
-    public required int PacienteId { get; set; }
+    public int PacienteId { get; set; }
 
     public ICollection<Exame> Exames { get; }
+
 }
 
 public class Exame{
@@ -79,6 +79,6 @@ public class Exame{
     public required string Nome { get; set; }
     public string? Descricao { get; set; }
     public DateTime Data { get; set; }
-    public required Atendimento Atendimento { get; set; }
-    public required int AtendimentoId { get; set; }
+    public ICollection<Atendimento> Atendimentos { get; set; }
+    public int AtendimentoId { get; set; }
 }
