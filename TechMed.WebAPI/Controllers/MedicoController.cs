@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace TechMed.WebAPI.Controllers;
 
@@ -6,17 +7,16 @@ namespace TechMed.WebAPI.Controllers;
 [Route("[controller]")]
 public class MedicoController : ControllerBase
 {
+    IOptions<OpenningTime> _openningTime;
+
+    public MedicoController(IOptions<OpenningTime> openningTime)
+    {
+        _openningTime = openningTime;
+    }
     private static readonly string[] Summaries = new[]
     {
         "Albert", "Pedro", "Maria", "Beatriz", "Joao", "Augusta"
     };
-
-    private readonly ILogger<MedicoController> _logger;
-
-    public MedicoController(ILogger<MedicoController> logger)
-    {
-        _logger = logger;
-    }
 
     [HttpGet(Name = "GetMedico")]
     public IEnumerable<Medico> Get()
